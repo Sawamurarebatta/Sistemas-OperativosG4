@@ -1,44 +1,63 @@
 Actividad 2: Auditoría de permisos de acceso
 1. Objetivo
+
 Verificar los controles de acceso a los archivos de las áreas de Finanzas y Recursos Humanos, identificando permisos incorrectos y aplicando medidas correctivas.
 
 2. Escenario
+
 Se asignaron permisos 777 a los siguientes archivos:
+
 empresa/finanzas/planilla.xlsx
 empresa/rrhh/empleados.csv
 
 3. Auditoría realizada
+
 Se utilizaron los comandos:
-  ls -l empresa/finanzas
-  ls -l empresa/rrhh
+
+bash
+ls -l empresa/finanzas
+ls -l empresa/rrhh
+
+
 Se identificaron permisos rwxrwxrwx (777) en ambos archivos.
 
 4. Análisis de seguridad
-- ¿Existe incumplimiento?
+¿Existe incumplimiento?
+
 Sí. Los archivos tienen permisos excesivos, permitiendo que cualquier usuario del sistema pueda leer, modificar y ejecutar su contenido.
 
-- ¿Qué riesgo genera?
+¿Qué riesgo genera?
 Exposición de información confidencial.
 Modificación no autorizada de planillas salariales.
 Alteración o eliminación de registros.
 Pérdida de confidencialidad e integridad.
-- ¿Qué control ISO 27001 aplica?
+¿Qué control ISO 27001 aplica?
+
 ISO/IEC 27001:2022:
+
 A.5.15: Control de acceso.
 A.5.18: Derechos de acceso.
 A.8.3: Restricción de acceso a la información.
 5. Corrección aplicada
+
 Se ejecutaron los siguientes comandos:
+
+bash
 chmod 640 empresa/finanzas/planilla.xlsx
 chmod 640 empresa/rrhh/empleados.csv
 
 6. Verificación final
+
 Se volvieron a ejecutar los comandos ls -l y se verificó que ambos archivos presentan permisos rw-r----- (640).
 
 7. Conclusión
+
 La auditoría permitió identificar permisos inadecuados que representaban un riesgo para la confidencialidad e integridad de la información.
+
 Se corrigieron los permisos de ambos archivos utilizando chmod 640, limitando el acceso al propietario y al grupo.
+
 De esta manera se mejora el control de acceso y se aplican principios de seguridad relacionados con ISO/IEC 27001:2022.
 
 8. Evidencias
+
 Las capturas de pantalla de la auditoría y corrección se encuentran en la carpeta evidencias/.
