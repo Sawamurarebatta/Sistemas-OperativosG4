@@ -1,9 +1,15 @@
 # Política de Seguridad de la Información
-## 1. Objetivo
-Proteger la confidencialidad, integridad y disponibilidad de los activos de información de la empresa simulada.
-## 2. Control de acceso
-El acceso a los archivos corporativos estará restringido al personal autorizado.
-## 3. Protección de credenciales
-Cada trabajador deberá utilizar una cuenta individual y proteger su contraseña.
-## 4. Responsabilidades
-El administrador del sistema será responsable de revisar periódicamente los permisos y usuarios del servidor Linux.
+
+## Objetivo
+Proteger los activos de información de la empresa.
+
+## Control de acceso
+Solo los usuarios autorizados podrán acceder
+a la información confidencial.
+
+## Responsabilidades
+Los empleados deberán proteger sus credenciales.
+
+## Gestión de incidentes
+Los incidentes de seguridad deberán notificarse
+al responsable de seguridad de la información.
